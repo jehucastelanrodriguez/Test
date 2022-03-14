@@ -11,9 +11,8 @@ namespace Test.tests
 
         /**
          * This test case will login in https://www.saucedemo.com/
-         * Verify button page is LOGIN
-         * Login to application
-         * Verify that the user can navigate to the products page
+         * Enter Logout button
+         * Verify that the user has logged out successfully
          */
         [Test]
         public void test_Logout()

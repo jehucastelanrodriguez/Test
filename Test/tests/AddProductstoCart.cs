@@ -13,9 +13,8 @@ namespace Test.tests
 
         /**
          * This test case will login in https://www.saucedemo.com/
-         * Verify button page is LOGIN
-         * Login to application
-         * Verify that the user can navigate to the products page
+         * Will add Products to Cart
+         * Verify that the user can see the products
          */
         [Test]
         public void test_Add_Products_To_Cart()
@@ -27,10 +26,10 @@ namespace Test.tests
             Thread.Sleep(3000);
             // go the next page
             objHomePage = new HomePage(driver);
-            //Verify home page
+            //Add Products to Cart
             objHomePage.addCartProducts();
             objHomePage.clickCart();
-
+            //Verify Products Added to the Cart
             objCart = new Cart(driver);
             Assert.IsTrue(objCart.getFirstCartProduct().Contains("Sauce Labs Backpack"));
             Assert.IsTrue(objCart.getSecondCartProduct().Contains("Sauce Labs Bike Light"));

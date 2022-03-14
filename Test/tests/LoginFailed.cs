@@ -9,8 +9,8 @@ namespace Test.tests
         LoginPage objLogin;
 
         /**
-         * This test case will login in https://www.saucedemo.com/
-         * Verify button page is LOGIN
+         * This test case will login fail on https://www.saucedemo.com/
+         * Login to App using wrong credentials
          * Login to application
          * Verify that the user can navigate to the products page
          */
@@ -21,10 +21,10 @@ namespace Test.tests
 
             objLogin = new LoginPage(driver);
 
-            //login to application
+            //login to application using wrong credentials
             objLogin.loginToSwagLabs("standard_use", "secret_sauce");
             Thread.Sleep(3000);
-            //Verify Error Message
+            //Verify Error Message when trying to login
             Assert.IsTrue(objLogin.getLoginPageErrorText().Contains("Epic sadface: Username and password do not match any user in this service"));
         }
     }

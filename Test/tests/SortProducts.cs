@@ -11,9 +11,9 @@ namespace Test.tests
 
         /**
          * This test case will login in https://www.saucedemo.com/
-         * Verify button page is LOGIN
          * Login to application
-         * Verify that the user can navigate to the products page
+         * Click Filter Products button
+         * Verify that the Products are filtered correctly from low to high
          */
         [Test]
         public void test_Products_Filter()

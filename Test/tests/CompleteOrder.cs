@@ -15,9 +15,10 @@ namespace Test.tests
 
         /**
          * This test case will login in https://www.saucedemo.com/
-         * Verify button page is LOGIN
-         * Login to application
-         * Verify that the user can navigate to the products page
+         * Add Products to the Cart
+         * Click the Checkout button
+         * Fill Info in your information screen
+         * Verify the user is on CheckoutPage
          */
         [Test]
         public void test_Complete_Order_Correctly()
@@ -31,16 +32,16 @@ namespace Test.tests
             Thread.Sleep(3000);
             // go the next page
             objHomePage = new HomePage(driver);
-            //Verify home page
+            //Add Prodcuts to the Cart
             objHomePage.addCartProducts();
             objHomePage.clickCart();
-
+            //Click Checkout button in Cart
             objCart = new Cart(driver);
             objCart.clickCheckoutbutton();
-
+            //Fill Information on your information screen
             objYourInformation = new YourInformation(driver);
             objYourInformation.fillYourInformation("Jehu", "Castelan", "08800");
-
+            //Verify user is on Checkout page
             objOverview = new Overview(driver);
             Assert.IsTrue(objOverview.getOverviewTitleText().Contains("CHECKOUT: OVERVIEW"));
         }
