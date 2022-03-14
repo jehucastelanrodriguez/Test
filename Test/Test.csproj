@@ -72,9 +72,6 @@
     <Compile Include="tests\LoginFailed.cs" />
     <Compile Include="tests\LoginSuccess.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Documentation\HowtoRuntheProject.txt" />
-  </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
